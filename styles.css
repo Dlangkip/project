@@ -142,3 +142,9 @@ input.blue-button {
   width: 50%;
 }
 
+div.otByu {
+  width: 100%;
+  clear: both;
+  display: block;
+
+}

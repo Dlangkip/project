@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Advanced Search</title>
+   
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .search-option {
+            margin-bottom: 10px;
+        }
+
+        .search-option label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .search-option input {
+            width: 100%;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+
+        .search-btn {
+            display: inline-block;
+            background-color: #007BFF;
+            color: #FFFFFF;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+       
+
+    </style>
+</head>
+<body>
+    <style>
+        .header-links{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end
+        }
+        </style>
+    <div class="header">
+        <div class="header-links">
+            <a href="index.html">Home</a>
+        </div>
+    </div>
+    
+    <div class="container">
+        <form action="/search" method="get">
+            <div class="search-option">
+                <label for="all-these-words">All these words:</label>
+                <input type="text" id="all-these-words" name="all-these-words">
+            </div>
+
+            <div class="search-option">
+                <label for="exact-phrase">This exact word or phrase:</label>
+                <input type="text" id="exact-phrase" name="exact-phrase">
+            </div>
+
+            <div class="search-option">
+                <label for="any-of-these-words">Any of these words:</label>
+                <input type="text" id="any-of-these-words" name="any-of-these-words">
+            </div>
+
+            <div class="search-option">
+                <label for="none-of-these-words">None of these words:</label>
+                <input type="text" id="none-of-these-words" name="none-of-these-words">
+            </div>
+
+            <button type="submit" class="search-btn">Advanced Search</button>
+        </form>
+    </div>
+</body>
+</html>
