@@ -1,93 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Advanced Search</title>
-   
-
-
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
+        .top-bar h1{
+            font-size: 1.5rem;
+            color: #ff4400;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #11100022;
         }
-
         
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
+        .main-div{
+            margin: 10px 5vh;
+            display: flex;
+            justify-content: space-between;
         }
 
-        .search-option {
-            margin-bottom: 10px;
+
+        .menu a{
+            font: 16px Arial, sans-serif;
+            display: flex;
+            padding: 8px;
+            text-decoration:none;
+            align-items: end;
+            color: #000;
+            justify-content: flex-end;
         }
 
-        .search-option label {
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        .search-option input {
+        .main-div .column .row{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 5px;
+            margin: 5px 0px;
             width: 100%;
-            padding: 5px;
-            box-sizing: border-box;
+            min-height: 25px;
         }
 
-        .search-btn {
-            display: inline-block;
-            background-color: #007BFF;
-            color: #FFFFFF;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 5px;
-            cursor: pointer;
+        .column .row input{
+            min-width: 75%;
+            height: 25px;
+            padding: 4px 10px;
+            border: 1px solid #000;
         }
-       
+
+        .column .row input:focus{
+            box-shadow: inset 0 0 2px .5px #2233ff;
+        }
+
+        .column .first{
+            font-size: 1.1 rem;
+        }
+
+        .column .row label{
+            font-size: 14px;
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .column1{
+            width: 70%;
+        }
+
+        .column2{
+            display: flex;
+            width: 30%;
+            align-items: flex-start;
+            flex-direction: column;
+        }
+
+        .column2 .row p{
+            font-size: 10px;
+            line-height: 25px;
+            color: #334422bb;
+        }
+        button{
+            height: 30px;
+            min-width: 120px;
+            background: #4d90fe;
+            border: 1px solid #3079ed;
+            color: #fff;
+            border-radius: 2px;
+            cursor: default;
+            font-size: 11px;
+            font-weight: bold;
+            text-align: center;
+            white-space: nowrap;
+            user-select: none;
+            box-shadow: none;
+            margin: 20px 0px 20px auto;
+            display: block;
+        }
 
     </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Google Search</title>
 </head>
 <body>
-    <style>
-        .header-links{
-            display: flex;
-            align-items: center;
-            justify-content: flex-end
-        }
-        </style>
-    <div class="header">
-        <div class="header-links">
-            <a href="index.html">Home</a>
-        </div>
-    </div>
-    
-    <div class="container">
-        <form action="/search" method="get">
-            <div class="search-option">
-                <label for="all-these-words">All these words:</label>
-                <input type="text" id="all-these-words" name="all-these-words">
+    <form action="https://www.google.com/search">
+        <div class="top-bar">
+            <div class="menu">
+                <a href="index.html">Home</a>
             </div>
 
-            <div class="search-option">
-                <label for="exact-phrase">This exact word or phrase:</label>
-                <input type="text" id="exact-phrase" name="exact-phrase">
+            <h1>Advanced Search</h1>
+            
+            </div>
+            <div class="main-div">
+                <div class="column column1">
+                    <span class="first">
+                        Find pages with...
+                    </span>
+                     <style>
+                        span{
+                            font-size: 1.0rem;
+                            font-weight: bold;
+                            padding: 10px;
+                        }
+                     </style>   
+                    <div>
+                        <br> <br>
+                    </div>
+                    <div class="row">
+                        <style>
+                            label{
+                                font-size: 1.5rem;
+                                display: flex;
+                                align-items: start;
+                                justify-content: flex-end;
+                            }
+                        </style>
+                        <label for="first">all these words:</label>
+                        <input type="text" id="first" name="as_q"/>
+                        </div>
+                        <div class="row">
+                            <label for="second">this exact word or phrase:</label>
+                            <input type="text" id="second" name="as_epq"/>
+                            </div>
+                            <div class="row">
+                                <label for="third">any of these words:</label>
+                                <input type="text" id="third" name="as_oq"/>
+                                </div>
+                                <div class="row">
+                                    <label for="fourth">none of  these words:</label>
+                                    <input type="text" id="fourth" name="as_eq"/>
+                                </div>
+                                <button type="submit" style="align-self: right;">Advanced Search</button>
+                    </div>
+                </div>
             </div>
 
-            <div class="search-option">
-                <label for="any-of-these-words">Any of these words:</label>
-                <input type="text" id="any-of-these-words" name="any-of-these-words">
-            </div>
 
-            <div class="search-option">
-                <label for="none-of-these-words">None of these words:</label>
-                <input type="text" id="none-of-these-words" name="none-of-these-words">
-            </div>
-
-            <button type="submit" class="search-btn">Advanced Search</button>
-        </form>
-    </div>
+    </form>
 </body>
 </html>
